@@ -127,8 +127,8 @@ const addMapMask = (map) => {
   map.addOverlay(border); */
 
   // 插入图片
-  const { start, end } = expandBounds(pStart.value, pEnd.value, 1.04);
-  const bounds = new BMapGL.Bounds(start, end);
+  // const { start, end } = expandBounds(pStart.value, pEnd.value, 1.04);
+  const bounds = new BMapGL.Bounds(pStart.value, pEnd.value);
   // 创建地面叠加层实例
   const imgOverlay = new BMapGL.GroundOverlay(bounds, {
     type: "image",
@@ -303,8 +303,8 @@ onMounted(async () => {
       margin-top: 16px;
     }
     .map-wrapper {
-      width: 700px;
-      height: 740px;
+      width: 680px;
+      height: 680px;
 
       #container {
         background: transparent !important;
